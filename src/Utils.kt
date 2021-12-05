@@ -11,3 +11,9 @@ fun readInput(name: String): List<String> = File("src", "$name.txt").readLines()
  * Converts string to md5 hash.
  */
 fun String.md5(): String = BigInteger(1, MessageDigest.getInstance("MD5").digest(toByteArray())).toString(16)
+
+fun printMatrix(board: MutableList<MutableList<Int>>) {
+    for (i in board.indices) {
+        println(board[i])
+    }
+}
