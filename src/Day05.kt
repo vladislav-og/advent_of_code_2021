@@ -23,7 +23,6 @@ fun main() {
 
     fun part1(inputList: List<String>): Int {
         val board = MutableList(1000) { MutableList(1000) { 0 } }
-        printMatrix(board)
 
         for (input in inputList) {
             val (x1,x2,y1,y2) = parseLine(input)
@@ -53,8 +52,6 @@ fun main() {
             }
         }
 
-        println()
-        printMatrix(board)
         return countMatrix(board)
     }
 
